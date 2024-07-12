@@ -1,0 +1,54 @@
+{
+  "common": {
+    "data_folder": "data/wind_farm_data/",
+    "sequence_length": 24,
+    "prediction_length": 3,
+    "num_series": 6,
+    "hidden_size": 128,
+    "num_layers": 1,
+    "num_directions": 2,
+    "normalization": "robust_minmax_normalize",
+    "cluster_type": "nearest"
+  },
+  "train": {
+    "epochs": 50,
+    "learning_rate": 0.001,
+    "data_path": "wind_data_dummy.parquet",
+    "loss_function": "mean_squared_error"
+  },
+  "test": {
+    "plot": true,
+    "data_path": "wind_data_test.parquet",
+    "plot_type": "seaborn",
+    "predict_all": true,
+    "parameters_path": "params_seq72_pred3_series5_hidden128_layers1_directions2_normrobust_minmax_normalize_epochs350_lr0.005_clusternearest_mean_squared_error_spatialTrue/best_model_175.pt"
+  },
+  "weather": {
+    "temperature_2m": true,
+    "relative_humidity_2m": true,
+    "rain": false,
+    "snowfall": false,
+    "pressure_msl": false,
+    "surface_pressure": false,
+    "cloud_cover": false,
+    "cloud_cover_low": false,
+    "cloud_cover_mid": false,
+    "cloud_cover_high": false,
+    "wind_speed_10m": false,
+    "wind_speed_100m": true,
+    "wind_direction_10m": false,
+    "wind_direction_100m": true,
+    "wind_gusts_10m": false,
+    "soil_moisture_0_to_7cm": false,	
+    "soil_moisture_7_to_28cm": false,
+    "soil_moisture_28_to_100cm": false,
+    "soil_moisture_100_to_255cm": false
+  },
+  "spatial": {
+    "spatial_use": true,
+    "plot": false
+  },
+  "probabilistic": {
+    "probabilistic_use": false
+  }
+}
