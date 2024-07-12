@@ -1,0 +1,18 @@
+# Ignore the .vscode configuration directory
+.vscode/
+
+# Ignore Python bytecode directories
+__pycache__/
+
+# Ignore custom files
+todo.txt
+
+*.pyc
+
+results/spatial/
+data/cache/spatial/
+data/cache/weather/
+data/cache/wind_farm_data/
+parameters/
+results/
+visual_abstract.py
